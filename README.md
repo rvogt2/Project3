@@ -9,5 +9,5 @@ this app is a class project meant to take a look at REACT, allowing users to fil
 all that was used was REACT, REACT.DOM, and by association HTML/CSS.
 <h4>Ways to improve</h4>
 <li>Validation for ensuring that the input doesnt match another input</li>
-<li></li>
-<li></li>
+<li>Functionality to sign up or at least have a set sign in feature with one set up user</li>
+<li>Figure out how to style the Layout/Routes</li>

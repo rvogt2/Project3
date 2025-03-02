@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import {Route,Routes,BrowserRouter} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+//functions, prefabs
+import './App.css';
+//styling
+import App from './pages/App';
+import Layout from './pages/Layout';
+import Contact from './pages/Contact';
+import NoPage from './pages/NoPage';
+//pages
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
-    <App/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<App/>}/>
+          <Route path="Contact" element={<Contact/>}/>
+          <Route path="*" element={<NoPage/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </>
   </React.StrictMode>
 );
